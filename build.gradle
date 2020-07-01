@@ -1,0 +1,47 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.board.backend'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations'
+    implementation  group: 'org.springframework', name: 'spring-webmvc'
+    implementation  group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat'
+    implementation  group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+    implementation  group: 'org.springframework.data', name: 'spring-data-jpa'
+    implementation  group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+    compile group: 'com.zaxxer', name: 'HikariCP'
+    compile('com.h2database:h2')
+    compile group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.1'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    runtime group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
