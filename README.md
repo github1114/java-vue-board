@@ -17,7 +17,7 @@ java 1.8, spring-boot 2.3.1, JPA 2.3.1, spring-security, H2, JWT, gradle 6.4.1,
 ```
 ## Frontend 사용기술
 ```
-vue6.5.0-next.0, vuex, Vuetify CSS Framework, JWT
+vue.js, vuex, Vuetify CSS Framework, JWT
 ```
 
 ## IDE
@@ -44,8 +44,7 @@ front-end
 
 1. VS code에서 프로젝트의 board/src/frontend 경로를 open 합니다.
 2. VS code 터미널에서 npm install 실행합니다.
-3. 해당 경로에 vue.js가 설치되지 않았다면 vue 6.5.0 버전을 설치합니다.
-4. VS code 터미널에서 npm run serve 실행합니다.
+3. VS code 터미널에서 npm run serve 실행합니다.
 
 
 ```
